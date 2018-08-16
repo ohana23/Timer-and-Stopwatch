@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Timer</title>
+    <link rel="stylesheet" href="css/style.css" id="styles">
+</head>
+
+<body id="body">
+    <div id="image">
+        <img src="images/logos/blackClock.svg" alt="clock image" id="bclock">
+    </div>
+    <div id="display">
+        <div id="timer-container">
+            <h1 id="timer">Timer</h1>
+            <input type="text" id="tIn" placeholder="minutes">
+        </div>
+        <button id="set-button">Set</button>
+        <button id="toggle">Start</button>
+        <button id="cancel">Cancel</button>
+    </div>
+    <div class="bottomRight"><h3>Designed & Developed by <br> Daniel Ohana in 2018</h3></div>
+
+    <script>
+        function changeToNight() {
+            var today = new Date().getHours();
+            var bodyElem = document.getElementById("body");
+            var logoElem = document.getElementById("image");
+            var clockElem = document.getElementById("bclock");
+            var inputElem = document.getElementById("tIn");
+
+            // If it's daytime, use a bright CSS theme.
+            // Otherwise, use a dark CSS theme.
+            if (today >= 6 && today <= 18) {
+            }
+            else {
+                bodyElem.classList.add("night");
+                logoElem.classList.add("night");
+                inputElem.classList.add("night");
+                clockElem.src = "images/logos/whiteClock.svg";
+            }
+        }
+
+        changeToNight();
+    </script>
+
+    <script src="js/timer.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
+
+
+<!-- have timer run in background -->
+<!-- allow user to input time to set timer to -->
+<!-- link stop/timer to each other -->
+<!-- change toggle button to 'set' after clicking cancel -->
