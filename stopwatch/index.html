@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>StopWatch</title>
+    <link rel="stylesheet" href="css/style.css" id="styles">
+    <!-- Icon credits -->
+    <!-- Icons made by <a href="https://www.flaticon.com/authors/smashicons" 
+    title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" 
+    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 
+    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a> -->
+</head>
+
+<body id="body">
+    <div id="image">
+        <img src="images/logos/whiteTimer.svg" alt="timer image" id="bTimer">
+    </div>
+    <div id="display">
+        <h1 id="timer">StopWatch</h1>
+        <button id="toggle">Start</button>
+        <button id="reset">Reset</button>
+    </div>
+    <div class="bottomRight"><h3>Designed & Developed by <br> Daniel Ohana in 2018</h3></div>
+
+
+
+        <!-- JS used to change color of background and text according
+    to the time of day. -->
+        <script>
+            function changeToNight() {
+                var today = new Date().getHours();
+                var bodyElem = document.getElementById("body");
+                var logoElem = document.getElementById("image");
+                var timerElem = document.getElementById("bTimer");
+
+                // If it is daytime, use a bright CSS theme.
+                // Otherwise, use a dark CSS theme.
+                if (today >= 6 && today <= 19) {
+                    // alert(today + " goodday");
+                    timerElem.src="images/logos/blackTimer.svg";
+                }
+                else {
+                    bodyElem.classList.add("night");
+                    logoElem.classList.add("night");
+                    // alert(today + " goodnight");
+                }
+            }
+
+            changeToNight();
+        </script>
+
+        <script src="js/stopwatch.js"></script>
+        <script src="js/main.js"></script>
+</body>
+
+</html>

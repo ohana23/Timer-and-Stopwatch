@@ -1,0 +1,112 @@
+body {
+  text-align: center;
+  background-color: whitesmoke;
+  color: rgb(16, 21, 71);
+}
+
+body.night {
+  background-color: rgb(35, 37, 61);
+  color: whitesmoke;
+}
+
+#image {
+  margin-top: 100px;
+
+  animation-name: fadeIn;
+  animation-duration: 1.7s;
+  animation-delay: 0s;
+  animation-timing-function: ease;
+}
+img {
+  width: 40pt;
+  height: 40pt;
+}
+
+#display {
+  width: 100%;
+  /* border: 1px solid; */
+  margin-top: 50px;
+
+  animation-name: fadeIn;
+  animation-duration: 1.7s;
+  animation-delay: 0s;
+  animation-timing-function: ease;
+}
+
+.bottomRight {
+  position: absolute;
+  width: 150px;
+  bottom: 10px;
+  right: 30px;
+  margin-bottom: 10px;
+  font-size: 1.5vmin;
+  color: rgb(168, 168, 168);
+}
+
+#toggle {
+  animation-name: fadeFromLeft;
+  animation-duration: 1.7s;
+  animation-delay: 0s;
+  animation-timing-function: ease;
+}
+
+#reset {
+  animation-name: fadeFromRight;
+  animation-duration: 1.7s;
+  animation-delay: 0s;
+  animation-timing-function: ease;
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: translateY(-30%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 100;
+  }
+}
+@keyframes fadeFromLeft {
+  0% {
+    transform: translateX(-30%);
+    box-shadow: none;
+    background-color: transparent;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes fadeFromRight {
+  0% {
+    transform: translateX(30%);
+    box-shadow: none;
+    background-color: transparent;
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+#timer {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 80px;
+  font-weight: 300;
+}
+
+button {
+  cursor: pointer;
+
+  border: none;
+  outline: none;
+
+  background-color: transparent;
+
+  /* night time */
+  color: rgb(60, 177, 231);
+
+  font-family: sans-serif;
+  font-size: 30px;
+  /* font-weight: 100; */
+  text-transform: capitalize;
+}
